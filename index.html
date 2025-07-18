@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Tic Tac Toe</title>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div class="top-bar">
+    <div class="theme-toggle">
+      <span class="toggle-label">☀️</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider-round"></span>
+      </label>
+      <span class="toggle-label">🌙</span>
+    </div>
+
+    <select id="modeSelect">
+      <option value="2">2 Player</option>
+      <option value="1">Single Player (AI)</option>
+    </select>
+
+    <div class="mute-toggle">
+      <span class="toggle-label"><span class="material-symbols-outlined" style="color:#FFC414;">
+        volume_up
+        </span></span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="muteToggle">
+        <span class="slider-round"></span>
+      </label>
+      <span class="toggle-label"><span class="material-symbols-outlined" style="color:#FFC414;">
+        volume_off
+        </span></span>
+    </div>
+  </div>
+
+  <div class="score">Score - X: <span id="scoreX">0</span> | O: <span id="scoreO">0</span></div>
+  <div class="board" id="board"></div>
+
+  <div class="buttons">
+    <button onclick="restartGame()">Restart Game</button>
+    <button onclick="resetScores()">Reset Scores</button>
+    <button id="pauseBtn" onclick="togglePause()">Pause</button>
+  </div>
+
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h2 id="popupTitle"></h2>
+      <p id="popupMessage"></p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
